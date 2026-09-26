@@ -1,12 +1,19 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { windowStart } from '../config/window.js';
 import type { Report } from '../types.js';
 
 const cache = new Map<string, Report[]>();
 
+/** Module-relative first (traced into the Vercel bundle), then the working directory. */
+function defaultPath(): string {
+  const here = fileURLToPath(new URL('../../data/reports.json', import.meta.url));
+  return existsSync(here) ? here : join(process.cwd(), 'data', 'reports.json');
+}
+
 /** Reads the static reports file (cached per path). Missing file → []. Drops rows published before windowStart(). */
-export function loadReports(path: string = join(process.cwd(), 'data', 'reports.json')): Report[] {
+export function loadReports(path: string = defaultPath()): Report[] {
   const hit = cache.get(path);
   if (hit) return hit;
   let raw: string;
