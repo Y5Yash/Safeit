@@ -24,17 +24,18 @@ describe('parseCommon', () => {
   it('uses the IST calendar day for today', () => {
     expect(parseCommon(q('city=goa'), new Date('2026-09-26T19:00:00Z'))).toMatchObject({ to: '2026-09-27' });
   });
-  it('defaults to the full window, all categories and both sources', () => {
+  it('defaults to the full window, all categories and all sources', () => {
     const p = ok('city=goa');
     expect([p.from, p.to]).toEqual(['2026-03-26', '2026-09-26']);
     expect(p.categories).toEqual(CATEGORY_IDS);
-    expect(p.sources).toEqual(['news', 'police']);
+    expect(p.sources).toEqual(['news', 'police', 'review']);
   });
   it('validates categories and sources lists', () => {
     expect(ok('city=goa&categories=murder,bogus, fraud').categories).toEqual(['murder', 'fraud']);
     expect(ok('city=goa&categories=bogus').categories).toEqual(CATEGORY_IDS);
     expect(ok('city=goa&sources=police').sources).toEqual(['police']);
-    expect(parseCommon(q('city=goa&sources=review'), today)).toHaveProperty('error');
+    expect(ok('city=goa&sources=review').sources).toEqual(['review']);
+    expect(parseCommon(q('city=goa&sources=blog'), today)).toHaveProperty('error');
   });
   it('rejects malformed dates and inverted ranges', () => {
     expect(parseCommon(q('city=goa&from=26-09-2026'), today)).toHaveProperty('error');

@@ -6,7 +6,7 @@ export const CITIES = ['delhi', 'bengaluru', 'goa'] as const;
 export type City = (typeof CITIES)[number];
 
 /** Matches merge_plan.md §2 so police-session rows merge without mapping. */
-export const SOURCE_TYPES = ['news', 'police_press_release', 'police_fir_list', 'police_detection_report'] as const;
+export const SOURCE_TYPES = ['news', 'police_press_release', 'police_fir_list', 'police_detection_report', 'review'] as const;
 export type SourceType = (typeof SOURCE_TYPES)[number];
 
 export type GeoPrecision = 'address' | 'police_station' | 'locality' | 'city';

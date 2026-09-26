@@ -77,6 +77,40 @@ The input is JSONL in the incident schema of `merge_plan.md` §2. How rows are h
 
 Rows are upserted by `source_link`, and `event_id`s are re-assigned over the whole file. The police session's victim, accused and other personal fields are dropped.
 
+## Merging review incidents (SafeMap)
+
+```bash
+npm run merge:reviews [-- data/reviews/foo.csv ...] [--out data/reports.json]
+```
+
+With no paths given, it merges every CSV in `data/reviews/`. Those CSVs come from the SafeMap Review Intelligence Actor: negative Google Maps reviews around city hot zones, classified by an LLM. There is one file per city (`safemap_<city>_dataset.csv`).
+
+Each file has these leading columns: `title, category, source_link, date_time, location, publisher, description`. Its other columns include `place_name`, `zone`, `subcategory`, `latitude` and `longitude`.
+
+How rows are handled:
+
+- **Stored as:**
+  - `source_type: review`
+  - `source_name: Google Maps reviews`
+  - `source_link`: the review itself
+  - `geo_precision: address`: the coordinates are the reviewed place's Google Maps pin
+- **Skipped rows:**
+  - `record_type` is not `incident` (for example the zone-summary rows)
+  - published before the 6-month window
+  - outside the city areas
+  - no link
+- **City:** taken from the coordinates.
+- **Category:** mapped to the Safe-it taxonomy, using the subcategory first and then the category:
+  - Scam / Fraud → `fraud` (`cyber_fraud` for UPI, online or card fraud)
+  - Harassment → `sexual_crime`
+  - Accident → `road_accident`
+  - Unsafe area, infrastructure hazards and natural disasters → `public_safety`
+  - Crime → theft, robbery or snatching from the subcategory, otherwise the regex classifier
+- **Dates:** `published_datetime` is the review date. `incident_datetime` stays `null`, because a review doesn't reliably date the incident.
+- **Upserts:** rows are upserted by `source_link`, and `event_id`s are re-assigned over the whole file, as with police records. Re-running the merge is safe.
+
+A review is a reviewer's own statement, not a verified incident. The CSVs store no reviewer personal data.
+
 ## API
 
 All endpoints are `GET`, CORS-enabled and read `data/reports.json`.
@@ -88,7 +122,7 @@ All endpoints are `GET`, CORS-enabled and read `data/reports.json`.
 | `city` | required | `delhi` · `bengaluru` · `goa` |
 | `from`, `to` | the last 184 days, ending today | `YYYY-MM-DD`, IST days, both inclusive. Filters on incident time, or published time if there is none. |
 | `categories` | all | Comma list of category ids (see `/api/meta`) |
-| `sources` | `news,police` | `police` matches every `police_*` source type |
+| `sources` | `news,police,review` | `police` matches every `police_*` source type; `review` matches Google Maps review incidents |
 
 ### `GET /api/heatmap`
 
@@ -140,6 +174,7 @@ The taxonomy lives in one file, `src/config/categories.ts`. It is derived from a
 - Place names and police station locations come from © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL).
 - Geocoding uses [Nominatim](https://nominatim.org/), under its [usage policy](https://operations.osmfoundation.org/policies/nominatim/).
 - News content belongs to the respective publishers. Only headlines, short summaries with personal details removed, and links are stored.
+- Review incidents link to public Google Maps reviews. Only a generated headline, a short neutral summary and the review link are stored.
 
 ## Reprocessing and deploying
 

@@ -11,7 +11,8 @@
     "seed:gazetteer": "tsx scripts/seed-gazetteer.ts",
     "collect": "tsx --env-file-if-exists=.env scripts/collect.ts",
     "merge:police": "tsx scripts/merge-police.ts",
-    "reprocess": "tsx scripts/reprocess.ts"
+    "reprocess": "tsx scripts/reprocess.ts",
+    "merge:reviews": "tsx scripts/merge-reviews.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

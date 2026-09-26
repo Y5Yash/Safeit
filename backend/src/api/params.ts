@@ -3,7 +3,7 @@ import { isCity } from '../config/cities.js';
 import { WINDOW_DAYS } from '../config/window.js';
 import type { CategoryId, City, Report } from '../types.js';
 
-export type SourceKind = 'news' | 'police';
+export type SourceKind = 'news' | 'police' | 'review';
 export interface CommonParams {
   city: City;
   from: string;
@@ -16,7 +16,7 @@ export interface CommonParams {
 
 const DAY_MS = 86_400_000;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-const SOURCE_KINDS: SourceKind[] = ['news', 'police'];
+const SOURCE_KINDS: SourceKind[] = ['news', 'police', 'review'];
 const istDay = (d: Date) => new Date(d.getTime() + 5.5 * 3_600_000).toISOString().slice(0, 10);
 const istStart = (ymd: string) => new Date(`${ymd}T00:00:00+05:30`);
 const validDay = (ymd: string) => {
@@ -48,14 +48,15 @@ export function parseCommon(q: URLSearchParams, today: Date = new Date()): Commo
   if (sp !== null) {
     const list = sp.split(',').map((s) => s.trim()).filter(Boolean);
     if (!list.length || list.some((s) => !(SOURCE_KINDS as string[]).includes(s))) {
-      return { error: 'sources must be a comma list of news, police' };
+      return { error: 'sources must be a comma list of news, police, review' };
     }
     sources = SOURCE_KINDS.filter((s) => list.includes(s));
   }
   return { city, from, to, start, end, categories, sources };
 }
 
-export const sourceKind = (r: Report): SourceKind => (r.source_type.startsWith('police_') ? 'police' : 'news');
+export const sourceKind = (r: Report): SourceKind =>
+  r.source_type.startsWith('police_') ? 'police' : r.source_type === 'review' ? 'review' : 'news';
 export const effectiveTime = (r: Report): number => Date.parse(r.incident_datetime ?? r.published_datetime);
 
 /** City, source, category and effective-time ([start, end)) filter shared by heatmap and reports. */
