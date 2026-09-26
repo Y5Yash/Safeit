@@ -35,3 +35,10 @@ describe('scrubPii', () => {
     expect(scrubPii('Phone no. 1 seller held; 5 years of jail')).toBe('Phone no. 1 seller held; 5 years of jail');
   });
 });
+
+describe('scrubPii word-number ages', () => {
+  it('removes ages written as words', () => {
+    expect(scrubPii('a man sexually assaulted a three-year-old girl in Rohini')).toBe('a man sexually assaulted a girl in Rohini');
+    expect(scrubPii('killed a five-year-old boy, aged twenty-two')).not.toMatch(/year-old|twenty/);
+  });
+});

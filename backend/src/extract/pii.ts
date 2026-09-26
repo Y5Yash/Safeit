@@ -1,7 +1,8 @@
 const HOUSE_NO_RE = /\b(?:h\.?\s?no\b\.?|house\s+no\b\.?)\s*(?=[\w/-]*\d)[\w/-]+/gi;
 /** "s/o Ram Kumar", "r/o Seelampur" … up to the next , . or ; (single-letter initials like "R." are skipped over). */
 const RELATION_RE = /\b[sdwr]\/o\b(?:\b[a-z]\.|[^,.;])*/gi;
-const AGE_RE = /\b(?:aged\s+(?:about\s+)?\d+|\d+-years?-old)\b/gi;
+const NUM = '(?:\\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:-(?:one|two|three|four|five|six|seven|eight|nine))?';
+const AGE_RE = new RegExp(`\\b(?:aged\\s+(?:about\\s+)?${NUM}|${NUM}-(?:and-a-half-)?(?:years?|months?)-old)\\b`, 'gi');
 
 /** Removes personal identifiers (relations, residence, age, house numbers) from a short text. */
 export function scrubPii(s: string): string {

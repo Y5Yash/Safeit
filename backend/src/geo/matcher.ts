@@ -2,6 +2,8 @@ import { CITY_CONFIG } from '../config/cities.js';
 import type { City, GazetteerEntry, LocationMatch } from '../types.js';
 import { normalizeName } from './normalize.js';
 
+// OSM 'amenity=police' also tags HQs, wings and offices; they are not jurisdictions.
+export const GENERIC_POLICE_RE = /\b(delhi|bengaluru|bangalore|goa|commissioner|director|general|crime branch|cyber|traffic|women|economic offences|special cell|headquarters|hq|control room|wing|office|police lines?)\b/;
 const STOP_NAMES = new Set([
   'nagar', 'colony', 'market', 'village', 'sector', 'road', 'main road', 'city', 'old', 'new',
   'railway station', 'bus stand', 'extension', 'layout', 'block', 'phase', 'north', 'south', 'east', 'west',
@@ -22,6 +24,7 @@ export function buildMatcher(entries: GazetteerEntry[], city: City): Matcher {
   for (const e of entries) {
     const norm = normalizeName(e.name);
     if (norm.length < 4 || STOP_NAMES.has(norm) || aliases.has(norm)) continue;
+    if (e.kind === 'police_station' && GENERIC_POLICE_RE.test(e.name.toLowerCase())) continue;
     if (e.kind === 'police_station' && !stations.has(norm)) stations.set(norm, e);
     const prev = byNorm.get(norm);
     if (!prev || (prev.kind === 'police_station' && e.kind === 'locality')) byNorm.set(norm, e);

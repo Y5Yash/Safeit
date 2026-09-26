@@ -1,0 +1,637 @@
+{
+  "delhi|daryaganj": {
+    "lat": 28.64609,
+    "lng": 77.243048,
+    "display_name": "Daryaganj, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi|amar colony": {
+    "lat": 28.5615391,
+    "lng": 77.2431499,
+    "display_name": "Amar Colony, Lajpat Nagar, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "goa|patto": {
+    "lat": 15.4951492,
+    "lng": 73.8354156,
+    "display_name": "Patto, Panaji, Tiswadi, North Goa, Goa, 403001, India"
+  },
+  "goa|telugu bar": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|delhi-ncr": {
+    "lat": 28.590557,
+    "lng": 77.0437497,
+    "display_name": "Delhi NCR Taxi Solutions, Pocket 7 Road, Pocket 7 Market, Dwarka, Najafgarh, Delhi, South West Delhi, Delhi, 110075, India"
+  },
+  "goa|odisha": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|anand parbat. on": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "goa|madhya pradesh": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|chennai": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "goa|hong kong": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|rouse avenue": {
+    "lat": 28.6327957,
+    "lng": 77.2314266,
+    "display_name": "Rouse Avenue, Delhi, Old Delhi, Delhi, India"
+  },
+  "delhi|ranhola": {
+    "lat": 28.6580019,
+    "lng": 77.0359234,
+    "display_name": "Ranhola, West, Delhi, West Delhi, Delhi, India"
+  },
+  "goa|belagavi": {
+    "lat": 15.4953544,
+    "lng": 73.8373699,
+    "display_name": "PF5: Belagavi Via Chorla, NH66, Patto Colony, Patto, Panaji, Tiswadi, North Goa, Goa, 403100, India"
+  },
+  "delhi|kotwali": {
+    "lat": 28.5981251,
+    "lng": 77.1280204,
+    "display_name": "Kotwali Road, Gopinath Bazar, Delhi Cantonment, New Delhi, Delhi, 110046, India"
+  },
+  "delhi|seemapuri": {
+    "lat": 28.6807082,
+    "lng": 77.3277509,
+    "display_name": "Seemapuri (Old), Aradhak Marg, Dilshad Garden, Shahdara North, Delhi, North East Delhi, Delhi, 110095, India"
+  },
+  "goa|dadeshwar mandap": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|bawana": {
+    "lat": 28.79966,
+    "lng": 77.0328847,
+    "display_name": "Bawana, Narela, Delhi, Outer North Delhi, Delhi, India"
+  },
+  "delhi|kucha mahajani": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|rajasthan.police": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|sultanpuri": {
+    "lat": 28.6996553,
+    "lng": 77.0662843,
+    "display_name": "Sultanpuri, Rohini, Delhi, North West Delhi, Delhi, 110086, India"
+  },
+  "delhi|vasant kunj": {
+    "lat": 28.5292495,
+    "lng": 77.1541335,
+    "display_name": "Vasant Kunj, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi|health services": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|ncrb.the": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|outer": {
+    "lat": 28.7603404,
+    "lng": 77.0362476,
+    "display_name": "Outer North Delhi, Delhi, India"
+  },
+  "delhi|gali number seven": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|alwar": {
+    "lat": 28.5930691,
+    "lng": 77.2566488,
+    "display_name": "Delhi–Alwar RRTS, Nizamuddin Railway Station Flyover, Central, Delhi, South East Delhi, Delhi, 110013, India"
+  },
+  "bengaluru|chinnaswamy": {
+    "lat": 12.9788127,
+    "lng": 77.5995775,
+    "display_name": "M Chinnaswamy Stadium, Queen's Road, Sampangirama Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India"
+  },
+  "delhi|municipal corporation": {
+    "lat": 28.6274013,
+    "lng": 77.216014,
+    "display_name": "New Delhi Municipal Corporation Park, Connaught Place, New Delhi, Delhi, India"
+  },
+  "delhi|pathwara": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|shalimar bagh": {
+    "lat": 28.7019574,
+    "lng": 77.1654317,
+    "display_name": "Shalimar Bagh, Shalimar Bagh Flyover, Jailer Wala Bagh, Ashok Vihar, Shalimar Bagh, Keshavpuram, Delhi, Central North Delhi, Delhi, 110088, India"
+  },
+  "delhi|rajouri garden": {
+    "lat": 28.6490563,
+    "lng": 77.1227198,
+    "display_name": "Rajouri Garden (Blue Line), Shivaji Marg, Tilak Nagar Industrial Area, Mayapuri, West, Delhi, West Delhi, Delhi, 110027, India"
+  },
+  "bengaluru|murugeshpalya": {
+    "lat": 12.9589406,
+    "lng": 77.6555917,
+    "display_name": "Murugeshpalya Jama Masjid, Church Road, Kaveri Nagara, Murugeshpalaya, Konena Agrahara, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560017, India"
+  },
+  "delhi|red fort": {
+    "lat": 28.656081,
+    "lng": 77.2407959,
+    "display_name": "Red Fort, Mahatma Gandhi Marg, Old Delhi, City & Sadar, Delhi, Old Delhi, Delhi, 110003, India"
+  },
+  "delhi|jahangir puri": {
+    "lat": 28.7301654,
+    "lng": 77.1679057,
+    "display_name": "Jahangir Puri, Jahangirpuri Colony, Civil Lines, Delhi, North Delhi, Delhi, 110033, India"
+  },
+  "bengaluru|china": {
+    "lat": 12.9158761,
+    "lng": 77.6326504,
+    "display_name": "China Town, 13th Cross Road, Sector 6, HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560102, India"
+  },
+  "delhi|investigation": {
+    "lat": 28.6463566,
+    "lng": 77.2016741,
+    "display_name": "Directorate General of Income Tax Investigation, Upper Ridge Road, Karol Bagh, Delhi, Central Delhi, Delhi, 110055, India"
+  },
+  "delhi|raja": {
+    "lat": 28.644154,
+    "lng": 77.2498378,
+    "display_name": "Raj Ghat, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi|madanpur khadar": {
+    "lat": 28.53493,
+    "lng": 77.3005184,
+    "display_name": "Madanpur Khadar, Shaheen Bagh, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi|vadodara": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|chandigarh": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|hauz rani": {
+    "lat": 28.5291809,
+    "lng": 77.2117586,
+    "display_name": "Hauz Rani, Lado Sarai, South, Delhi, South Delhi, Delhi, India"
+  },
+  "bengaluru|devanahalli": {
+    "lat": 13.1426658,
+    "lng": 77.7341522,
+    "display_name": "Our World of Dogs, 295, Devanahalli, beside New KPTCL, Budigere, Budigere Road, Manchappanahosahalli, Bengaluru, Devanahalli taluku, Bengaluru North, Karnataka, 562165, India"
+  },
+  "delhi|planning": {
+    "lat": 28.6288408,
+    "lng": 77.2458812,
+    "display_name": "School of Planning and Architecture, 4, Indraprastha Marg, Indraprastha Estate, Central, Delhi, South East Delhi, Delhi, 110002, India"
+  },
+  "bengaluru|karnataka": {
+    "lat": 13.0222347,
+    "lng": 77.5671832,
+    "display_name": "Indian Institute of Science, CV Raman Road, Sadashivanagar, Sadashiva Nagara, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560012, India"
+  },
+  "delhi|ishu vihar": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|jyoti nagar": {
+    "lat": 28.6913281,
+    "lng": 77.2877557,
+    "display_name": "Jyoti Nagar, Shahdara North, Delhi, North East Delhi, Delhi, India"
+  },
+  "delhi|vasundhara enclave": {
+    "lat": 28.6017308,
+    "lng": 77.3211059,
+    "display_name": "Vasundhara Enclave, Delhi, East Delhi, Delhi, 110096, India"
+  },
+  "delhi|nagpur": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|darya ganj": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|d-block": {
+    "lat": 28.5389561,
+    "lng": 77.1841814,
+    "display_name": "D block, Lado Sarai, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi|ghaziabad.the": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|kumar organics": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|jahangirpuri": {
+    "lat": 28.7259717,
+    "lng": 77.162658,
+    "display_name": "Jahangirpuri, Mall Road Extension, Jahangir Puri, Civil Lines, Delhi, North Delhi, Delhi, 110033, India"
+  },
+  "delhi|jahangirpuri bus stand": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|arkavathi layout": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|agricultural research": {
+    "lat": 28.6362997,
+    "lng": 77.1576444,
+    "display_name": "Indian Agricultural Research Institute, Professor Ram Nath Vij Marg, New Rajendra Nagar, Central Ridge Reserve Forest, Karol Bagh, Delhi, Central Delhi, Delhi, 110012, India"
+  },
+  "delhi|jamia millia islamia": {
+    "lat": 28.5584903,
+    "lng": 77.2811647,
+    "display_name": "Jamia Millia Islamia, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "bengaluru|rajasthan": {
+    "lat": 12.9065923,
+    "lng": 77.5873203,
+    "display_name": "Rajasthan Wood Works, 20th Main Road, Shakambarinagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560078, India"
+  },
+  "delhi|ahmedabad": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|patel nagar": {
+    "lat": 28.6450127,
+    "lng": 77.1692817,
+    "display_name": "Patel Nagar, Patel Road, South Patel Nagar, Patel Nagar, Karol Bagh, Delhi, Central Delhi, Delhi, 110008, India"
+  },
+  "bengaluru|bandikodigehalli": {
+    "lat": 13.1663314,
+    "lng": 77.6902892,
+    "display_name": "Bandikodigehalli, Yelahanka taluku, Bengaluru Urban, Karnataka, India"
+  },
+  "bengaluru|bengaluru's": {
+    "lat": 12.8964767,
+    "lng": 77.6216675,
+    "display_name": "Sai Accotax India Pvt Ltd, SLV Flora, 7th Main Road, Hongasandra, Devarachikkanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru South, Karnataka, 560068, India"
+  },
+  "delhi|prudence school": {
+    "lat": 28.6010553,
+    "lng": 77.0201094,
+    "display_name": "Prudence School, Najafgarh, Delhi, South West Delhi, Delhi, India"
+  },
+  "delhi|mainpuri": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|ramaraju's": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|maharashtra.ansari": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|atali": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|madhu vihar": {
+    "lat": 28.636056,
+    "lng": 77.3043835,
+    "display_name": "Madhu Vihar, Shahdara South, Delhi, East Delhi, Delhi, India"
+  },
+  "delhi|vikas nagar": {
+    "lat": 28.6440092,
+    "lng": 77.0544704,
+    "display_name": "Vikas Nagar, West, Delhi, West Delhi, Delhi, India"
+  },
+  "delhi|deepak's": {
+    "lat": 28.5373862,
+    "lng": 77.2116022,
+    "display_name": "Deepak Jolly Road, Shivalik, Malviya Nagar, South, Delhi, South Delhi, Delhi, 110017, India"
+  },
+  "delhi|anil's": {
+    "lat": 28.5739068,
+    "lng": 77.2172543,
+    "display_name": "Anil's Islam Motors, Barapullah Road Flyover, Kidwai Nagar East, Kidwai Nagar, Central, New Delhi, Delhi, 110049, India"
+  },
+  "delhi|taimur nagar": {
+    "lat": 28.571889,
+    "lng": 77.2693779,
+    "display_name": "Taimur Nagar, Okhla, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "bengaluru|chamarajnagar. he": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|janta vihar": {
+    "lat": 28.6258991,
+    "lng": 76.9670987,
+    "display_name": "Janta Vihar, Najafgarh, Delhi, South West Delhi, Delhi, India"
+  },
+  "delhi|rani jhansi": {
+    "lat": 28.6583791,
+    "lng": 77.2033814,
+    "display_name": "State Bank of India, Rani Jhansi Road, Bara Hindu Rao, Sadar Bazar, Sarai Rohilla, City & Sadar, Delhi, Old Delhi, Delhi, 110055, India"
+  },
+  "bengaluru|mayapur": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|panjtirthi": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|children": {
+    "lat": 28.5524671,
+    "lng": 77.2151031,
+    "display_name": "ASI Children's Museum, Asian Games Village Road, Asian Games Village, Hauz Khas, South, Delhi, South Delhi, Delhi, 110017, India"
+  },
+  "bengaluru|dakshina kannada": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|nand ram park": {
+    "lat": 28.6158554,
+    "lng": 77.0660965,
+    "display_name": "Nand Ram Park Main Road, Bindapur Village, Uttam Nagar East, Uttam Nagar, West, Delhi, West Delhi, Delhi, 110059, India"
+  },
+  "delhi|bihar": {
+    "lat": 28.5753035,
+    "lng": 77.2091976,
+    "display_name": "Mithila Painting, Bihar, Aurobindo Marg, Kidwai Nagar, New Delhi, Delhi, 110023, India"
+  },
+  "delhi|mayur vihar phase": {
+    "lat": 28.6043878,
+    "lng": 77.2936732,
+    "display_name": "State Bank of India, Khudiram Bose Marg, Pratap Nagar, Trilok Puri, Mayur Vihar, Shahdara South, Delhi, East Delhi, Delhi, 110091, India"
+  },
+  "delhi|delhi's prahladpur": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|chamarajpet. she": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|dubai": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|civil lines": {
+    "lat": 28.6806862,
+    "lng": 77.2225999,
+    "display_name": "Civil Lines, City & Sadar, Delhi, Old Delhi, Delhi, 110054, India"
+  },
+  "delhi|gokalpuri": {
+    "lat": 28.6953512,
+    "lng": 77.2913475,
+    "display_name": "Gokalpuri park, Babarpur, Shahdara North, Delhi, North East Delhi, Delhi, 110093, India"
+  },
+  "bengaluru|west bengal": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|pakistan": {
+    "lat": 28.5938052,
+    "lng": 77.1910425,
+    "display_name": "High Commission of Pakistan, 2/50-G, Shanti Path, Chanakyapuri, New Delhi, Delhi, 110021, India"
+  },
+  "delhi|maidan garhi": {
+    "lat": 28.4987734,
+    "lng": 77.1944475,
+    "display_name": "Maidan Garhi, South, Delhi, South Delhi, Delhi, 110068, India"
+  },
+  "delhi|sukhdev vihar metro": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|ramanagara": {
+    "lat": 12.9358977,
+    "lng": 77.5207378,
+    "display_name": "KPTCL Ramanagara Circle, Mysore Road, Pantarapalya, Bangarappa Nagara, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560039, India"
+  },
+  "delhi|wazirabad": {
+    "lat": 28.7297608,
+    "lng": 77.2212803,
+    "display_name": "Wazirabad, Civil Lines, Delhi, North Delhi, Delhi, 110084, India"
+  },
+  "bengaluru|begur": {
+    "lat": 12.8633887,
+    "lng": 77.6130112,
+    "display_name": "Begur, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India"
+  },
+  "bengaluru|kerala": {
+    "lat": 13.0538903,
+    "lng": 77.6020598,
+    "display_name": "Mahima Kerala Store, 2nd Main Road Venkate Gowda Layout Ayyappa Swamy Temple Street, Buvaneswari Nagara, Byatarayanapura, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560024, India"
+  },
+  "bengaluru|tumakuru": {
+    "lat": 13.0183878,
+    "lng": 77.5584928,
+    "display_name": "Yeshwantpura Circle Flyover, Subedarpalya, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560022, India"
+  },
+  "bengaluru|agrahara dasarahalli": {
+    "lat": 12.9830171,
+    "lng": 77.5399064,
+    "display_name": "Agrahara Dasarahalli, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India"
+  },
+  "bengaluru|padarayanapura": {
+    "lat": 12.9647243,
+    "lng": 77.5518191,
+    "display_name": "Padarayanapura, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India"
+  },
+  "bengaluru|platform no": {
+    "lat": 12.9835482,
+    "lng": 77.5712826,
+    "display_name": "Platform Road, Gopalpura, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560021, India"
+  },
+  "bengaluru|marathahalli.preliminary": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|bhuvaneshwarinagar. she": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|mangaluru": {
+    "lat": 13.1038938,
+    "lng": 77.5713424,
+    "display_name": "New Mangaluru store, 1st Main Road, 5th Phase, Doddabettahalli, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 560064, India"
+  },
+  "bengaluru|thrissur": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|kumaraswamy layout": {
+    "lat": 12.9150398,
+    "lng": 77.5678879,
+    "display_name": "Kumaraswamy Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India"
+  },
+  "bengaluru|kalaburagi": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|health sciences": {
+    "lat": 12.926286,
+    "lng": 77.5923238,
+    "display_name": "Rajiv Gandhi University of Health Sciences, 32nd Cross Road, Tilak Nagar, Jayanagar East, Tilak Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560041, India"
+  },
+  "bengaluru|kodagu": {
+    "lat": 12.9542268,
+    "lng": 77.4795872,
+    "display_name": "Kodagu Gowda Samaja, 100 Feet Road, 5th Block, Sir MV Layout, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560110, India"
+  },
+  "bengaluru|enforcement": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|whitefield": {
+    "lat": 12.9957428,
+    "lng": 77.7579489,
+    "display_name": "Whitefield (Kadugodi), SH35, Belathur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560067, India"
+  },
+  "bengaluru|holenarasipura": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|horamavu": {
+    "lat": 13.0273312,
+    "lng": 77.6601508,
+    "display_name": "Horamavu, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India"
+  },
+  "bengaluru|davanagere": {
+    "lat": 13.0619585,
+    "lng": 77.5878057,
+    "display_name": "Davanagere Benne Dosa, 14th Main Road, Defence Layout, Byatarayanapura, Bengaluru North City Corporation, Bengaluru, Yelahanka taluku, Bengaluru Urban, Karnataka, 560092, India"
+  },
+  "bengaluru|pattegarhpalya": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|kurubarakeranahalli": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "bengaluru|bt patil nagar": {
+    "lat": 13.028173,
+    "lng": 77.5727009,
+    "display_name": "80 Feet Road, Poojary Layout, Sadashivanagar, Sadashiva Nagara, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560094, India"
+  },
+  "bengaluru|chikkaballapura": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "goa|gavin araujo.the": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "goa|saligao": {
+    "lat": 15.5462074,
+    "lng": 73.7891386,
+    "display_name": "Saligao, Nagoa, Bardez, North Goa, Goa, 403511, India"
+  },
+  "goa|tavora": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "goa|manipal": {
+    "lat": 15.4602159,
+    "lng": 73.8132838,
+    "display_name": "Manipal Goa Cancer and General Hospital, Dr. E Borges Road, La Citadel Colony, Dona Paula, Panaji, Tiswadi, North Goa, Goa, 403004, India"
+  },
+  "goa|class": {
+    "lat": 15.4122801,
+    "lng": 73.9783509,
+    "display_name": "class block, 123, GEC Slope, Farmagudi, Ponda, South Goa, Goa, 403401, India"
+  },
+  "goa|kadnevhal": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "goa|sauntawaddo": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "goa|south": {
+    "lat": 15.4046429,
+    "lng": 73.7981398,
+    "display_name": "Food Corporation India, Sada, Vasco, Mormugao, South Goa, Goa, 403802, India"
+  },
+  "bengaluru|bannerghatta": {
+    "lat": 12.9292798,
+    "lng": 77.6006407,
+    "display_name": "Bannerghatta Road, S.G Palya, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560029, India"
+  },
+  "bengaluru|rr nagar. his": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  },
+  "delhi|burari metro": {
+    "lat": null,
+    "lng": null,
+    "display_name": null
+  }
+}

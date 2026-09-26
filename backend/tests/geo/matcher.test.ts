@@ -39,3 +39,16 @@ describe('matchLocation', () => {
     expect(matchLocation(m, input('Shahdaraabad incident'))).toBeNull();
   });
 });
+
+describe('generic police entries', () => {
+  it('ignores HQs, wings and city-wide forces', () => {
+    const g = buildMatcher([
+      { name: 'Delhi Police', kind: 'police_station', lat: 1, lng: 1 },
+      { name: 'Commissioner Of Police', kind: 'police_station', lat: 1, lng: 1 },
+      { name: 'Crime Branch', kind: 'police_station', lat: 1, lng: 1 },
+      { name: 'Timarpur Police Station', kind: 'police_station', lat: 28.7, lng: 77.22 },
+    ], 'delhi');
+    expect(matchLocation(g, { title: 'Delhi Police Crime Branch arrests man', keywords: [], text: 'The Commissioner of Police said...' })).toBeNull();
+    expect(matchLocation(g, { title: 'Theft reported at Timarpur police station', keywords: [], text: '' })?.text).toBe('Timarpur Police Station');
+  });
+});
