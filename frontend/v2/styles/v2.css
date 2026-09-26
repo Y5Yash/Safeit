@@ -1,0 +1,56 @@
+/* v2 layout (panel on the LEFT) + filters bar. Loaded after ../styles/base.css. */
+body.v2 { --sidebar-w: 380px; --topbar-h: 64px; }
+body.v2 .topbar { gap: 16px; }
+.brand-block { display: flex; flex-direction: column; justify-content: center; line-height: 1.15; }
+.tagline { font-size: 11px; color: var(--muted); white-space: nowrap; }
+body.v2 .layout { grid-template-columns: var(--sidebar-w) minmax(0, 1fr); }
+body.v2 .sidebar { border-left: 0; border-right: 1px solid var(--line); }
+
+/* Filters bar */
+.v2-filters { display: flex; align-items: center; gap: 10px; flex-wrap: nowrap; font-size: 13px; width: 100%; min-width: 0; }
+.v2-filters .f-group { display: flex; align-items: center; gap: 6px; }
+.v2-filters .f-cities { gap: 2px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 2px; flex-shrink: 0; }
+.v2-filters .f-city-btn { height: 28px; padding: 0 12px; border: 0; border-radius: 6px; background: transparent; color: var(--ink-2); font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap; }
+.v2-filters .f-city-btn:hover:not(:disabled):not(.is-active) { background: var(--card-2); color: var(--ink); }
+.v2-filters .f-city-btn.is-active { background: var(--blue); color: #fff; }
+.v2-filters .f-city-btn:disabled { opacity: .5; cursor: default; }
+
+.f-chips { flex-wrap: nowrap; overflow-x: auto; min-width: 0; scrollbar-width: none; }
+.f-chips::-webkit-scrollbar { display: none; }
+.f-chip { --chip-color: var(--ink-2); display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink-2); font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+.f-chip:hover:not(:disabled):not(.is-active) { color: var(--ink); border-color: #3a414d; }
+.f-chip.is-active { border-color: var(--chip-color); background: color-mix(in srgb, var(--chip-color) 22%, var(--card)); color: var(--ink); }
+.f-chip[data-id=""].is-active { border-color: var(--ink-2); background: var(--card-2); }
+.f-chip:disabled { opacity: .45; cursor: default; }
+.f-chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--chip-color); flex-shrink: 0; }
+.f-chip-count { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.f-chip.is-active .f-chip-count { color: var(--ink-2); }
+
+.f-more { position: relative; flex-shrink: 0; }
+.f-more > summary { list-style: none; display: inline-flex; align-items: center; gap: 4px; height: 30px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink-2); cursor: pointer; white-space: nowrap; user-select: none; }
+.f-more > summary::-webkit-details-marker { display: none; }
+.f-more > summary:hover, .f-more[open] > summary { color: var(--ink); }
+.f-more.has-value > summary { border-color: var(--blue); }
+.f-more:not([open]) .f-more-panel { display: none; }
+.f-more-panel { position: absolute; z-index: 30; top: calc(100% + 4px); right: 0; display: flex; flex-direction: column; gap: 8px; padding: 10px; min-width: 220px; background: var(--card-2); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, .45); }
+.v2-filters .f-date-label { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--muted); }
+.v2-filters .f-date-label input { height: 30px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: 13px; color-scheme: dark; }
+.v2-filters .f-date-label input:focus { outline: none; border-color: var(--blue); }
+.v2-filters .f-dates-reset { font-size: 12px; color: var(--blue); text-decoration: none; }
+.v2-filters .f-dates-reset:hover { text-decoration: underline; }
+.v2-filters .f-loading { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; animation: v2-pulse 1s ease-in-out infinite; }
+@keyframes v2-pulse { 0%, 100% { opacity: .3; transform: scale(.75); } 50% { opacity: 1; transform: scale(1); } }
+
+@media (max-width: 1100px) { .tagline { display: none; } }
+@media (max-width: 860px) {
+  body.v2 { --topbar-h: auto; }
+  .tagline { display: block; }
+  body.v2 .topbar { flex-wrap: wrap; row-gap: 8px; }
+  body.v2 .filters { order: 3; flex-basis: 100%; }
+  .brand-block { flex: 1; min-width: 0; }
+  .v2-filters { flex-wrap: wrap; }
+  .f-chips { flex-basis: 100%; order: 3; }
+  body.v2 .layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: 55vh auto; height: auto; }
+  body.v2 .map { grid-row: 1; }
+  body.v2 .sidebar { grid-row: 2; min-width: 0; border-right: 0; border-top: 1px solid var(--line); overflow: visible; }
+}

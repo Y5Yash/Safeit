@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Safe-it · Beware map</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="../styles/base.css" />
+  <link rel="stylesheet" href="styles/v2.css" />
+  <link rel="stylesheet" href="styles/map.css" />
+  <link rel="stylesheet" href="styles/sidebar.css" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+</head>
+<body class="v2">
+  <header class="topbar">
+    <div class="brand-block">
+      <div class="brand"><span class="brand-mark"></span>Safe-it</div>
+      <div class="tagline">Where to be careful in Bengaluru, Goa and Delhi</div>
+    </div>
+    <div id="filters" class="filters"></div>
+    <a class="version-toggle" id="to-v1" href="../">Classic map</a>
+  </header>
+  <main class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="Reports"></aside>
+    <section id="map" class="map" aria-label="Map of reported incidents"></section>
+  </main>
+  <script>
+    // Keep the toggle pointed at the same city before main.js loads (main.js keeps it in sync after).
+    (function () {
+      var c = new URLSearchParams(location.search).get('city');
+      if (c) document.getElementById('to-v1').href = '../?city=' + encodeURIComponent(c);
+    })();
+  </script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -15,11 +15,22 @@
   <header class="topbar">
     <div class="brand"><span class="brand-mark"></span>Safe-it</div>
     <div id="filters" class="filters"></div>
+    <a class="version-toggle" id="to-v2" href="v2/">Beware map →</a>
   </header>
   <main class="layout">
     <section id="map" class="map" aria-label="Map of reported incidents"></section>
     <aside id="sidebar" class="sidebar" aria-label="Reports"></aside>
   </main>
+  <script>
+    // Carry the current city over to the v2 map (read at click time; main.js rewrites ?city= on change).
+    (function (a) {
+      function sync() {
+        var c = new URLSearchParams(location.search).get('city');
+        a.href = 'v2/' + (c ? '?city=' + encodeURIComponent(c) : '');
+      }
+      ['mousedown', 'focus', 'click', 'touchstart'].forEach(function (ev) { a.addEventListener(ev, sync); });
+    })(document.getElementById('to-v2'));
+  </script>
   <script type="module" src="src/main.js"></script>
 </body>
 </html>

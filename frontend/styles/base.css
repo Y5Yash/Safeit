@@ -21,3 +21,5 @@ html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); 
   .layout { grid-template-columns: 1fr; grid-template-rows: 55vh auto; height: auto; }
   .sidebar { border-left: 0; border-top: 1px solid var(--line); }
 }
+.version-toggle { flex-shrink: 0; display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--ink-2); font-size: 12px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.version-toggle:hover { color: var(--ink); border-color: var(--blue); }
