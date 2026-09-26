@@ -1,0 +1,75 @@
+/* Map module styles: MapLibre container fill + legend overlay. */
+
+/* MapLibre adds its own "maplibregl-map" class directly onto the container
+   element we pass in (#map), it does not wrap it in a new div. That element
+   already has position:relative from base.css's .map rule; here we just make
+   sure it actually has a height to fill, since the grid layout in base.css
+   does not set one explicitly on every browser. */
+.map {
+  overflow: hidden;
+  height: 100%;
+}
+
+.map.maplibregl-map {
+  height: 100%;
+}
+
+/* Compact attribution control, kept unobtrusive in the corner. */
+.map .maplibregl-ctrl-attrib {
+  font-size: 10px;
+  background: rgba(14, 17, 22, 0.6);
+}
+
+.map .maplibregl-popup-content {
+  background: var(--card);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.map .maplibregl-popup-tip {
+  border-top-color: var(--card);
+  border-bottom-color: var(--card);
+}
+
+.map-legend {
+  position: absolute;
+  left: 10px;
+  bottom: 24px;
+  z-index: 4;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+.map-legend .legend-scale {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-2);
+}
+
+.map-legend .legend-swatches {
+  display: flex;
+  gap: 2px;
+}
+
+.map-legend .legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.map-legend .legend-note {
+  margin-top: 4px;
+  color: var(--muted);
+}

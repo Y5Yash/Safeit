@@ -1,0 +1,266 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sb-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sb-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sb-titles {
+  min-width: 0;
+}
+
+.sb-title-main {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.sb-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.sb-clear-btn {
+  flex: none;
+  background: var(--card-2);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: var(--font);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.sb-clear-btn:hover {
+  border-color: var(--muted);
+  color: var(--ink);
+}
+
+.sb-summary {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.sb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px 20px;
+}
+
+.sb-card {
+  background: var(--card-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.sb-card:hover {
+  border-color: var(--muted);
+  transform: translateY(-1px);
+}
+
+.sb-row-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sb-chip {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 3px 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 55%;
+}
+
+.sb-badge {
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 3px 9px;
+  white-space: nowrap;
+  color: var(--ink-2);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+}
+
+.sb-badge-news {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.sb-badge-police {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.sb-top-date {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.sb-card-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sb-card-title-link {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.sb-card-title-link:hover {
+  text-decoration: underline;
+}
+
+.sb-card-title-plain {
+  color: var(--ink);
+  cursor: default;
+}
+
+.sb-meta {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.sb-desc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sb-citynote {
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.sb-footer {
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+  line-height: 1.4;
+}
+
+.sb-error {
+  color: var(--orange);
+  font-size: 13px;
+}
+
+.sb-empty {
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Skeleton loading state */
+.sb-skeleton {
+  overflow: hidden;
+}
+
+.sb-sk {
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.sb-sk::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  transform: translateX(-100%);
+  animation: sb-shimmer 1.4s infinite;
+}
+
+.sb-sk-chip {
+  width: 70px;
+  height: 18px;
+  border-radius: 999px;
+}
+
+.sb-sk-badge {
+  width: 46px;
+  height: 18px;
+  border-radius: 999px;
+}
+
+.sb-sk-date {
+  margin-left: auto;
+  width: 60px;
+  height: 12px;
+}
+
+.sb-sk-title {
+  width: 90%;
+  height: 16px;
+}
+
+.sb-sk-meta {
+  width: 65%;
+  height: 12px;
+}
+
+.sb-sk-desc {
+  width: 100%;
+  height: 12px;
+}
+
+.sb-sk-desc-short {
+  width: 60%;
+}
+
+@keyframes sb-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

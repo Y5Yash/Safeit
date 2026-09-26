@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Safe-it · crime & safety map</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/filters.css" />
+  <link rel="stylesheet" href="styles/map.css" />
+  <link rel="stylesheet" href="styles/sidebar.css" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark"></span>Safe-it</div>
+    <div id="filters" class="filters"></div>
+  </header>
+  <main class="layout">
+    <section id="map" class="map" aria-label="Map of reported incidents"></section>
+    <aside id="sidebar" class="sidebar" aria-label="Reports"></aside>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
