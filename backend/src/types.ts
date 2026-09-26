@@ -1,6 +1,6 @@
-import type { CategoryId } from './config/categories.js';
+import type { CategoryId, GroupId } from './config/categories.js';
 
-export type { CategoryId };
+export type { CategoryId, GroupId };
 
 export const CITIES = ['delhi', 'bengaluru', 'goa'] as const;
 export type City = (typeof CITIES)[number];
@@ -32,6 +32,8 @@ export interface Report {
   lng: number;
   geo_precision: GeoPrecision;
   description: string | null;
+  /** Derived at load time by groupOf (not stored in data/reports.json). */
+  group?: GroupId | null;
 }
 
 export interface HttpResponse {

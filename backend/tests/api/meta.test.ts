@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { handleMeta } from '../../src/api/meta.js';
-import { CATEGORIES } from '../../src/config/categories.js';
+import { CATEGORIES, GROUPS } from '../../src/config/categories.js';
 import { rep } from './fixtures.js';
 
 describe('GET /api/meta', () => {
@@ -15,6 +15,10 @@ describe('GET /api/meta', () => {
     expect(m.cities.map((c: { id: string }) => c.id)).toEqual(['delhi', 'bengaluru', 'goa']);
     expect(m.cities[0]).toMatchObject({ name: 'Delhi', center: { lat: 28.6139, lng: 77.209 } });
     expect(m.categories).toEqual(CATEGORIES.map(({ id, label }) => ({ id, label })));
+    expect(m.groups.map((g: { id: string }) => g.id)).toEqual(['violent', 'harassment', 'scam', 'transport', 'stay', 'safe']);
+    expect(m.groups[0]).toEqual({ id: 'violent', label: 'Violent crime', color: '#e66767' });
+    expect(m.groups[5]).toEqual({ id: 'safe', label: 'Safe', color: '#199e70', disabled: true });
+    expect(m.groups).toHaveLength(GROUPS.length);
     expect(m.sources).toEqual([
       { city: 'delhi', source_name: 'Delhi Police', source_type: 'police_fir_list', count: 1 },
       { city: 'delhi', source_name: 'TOI', source_type: 'news', count: 2 },

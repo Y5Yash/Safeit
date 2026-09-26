@@ -1,4 +1,4 @@
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -24,5 +24,19 @@ describe('loadReports', () => {
 
   it('returns [] for a missing file', () => {
     expect(loadReports(join(dir, 'missing.json'))).toEqual([]);
+  });
+
+  it('derives group on every row without rewriting the file', () => {
+    const path = join(dir, 'groups.json');
+    const t = new Date(Date.now() - 86_400_000).toISOString();
+    const rows = [
+      rep({ category: 'murder', title: 'Man shot dead', published_datetime: t }),
+      rep({ category: 'fraud', title: 'Tourists duped by fake taxi touts', published_datetime: t }),
+      rep({ category: 'burglary_theft', title: 'House burgled', published_datetime: t }),
+    ];
+    const json = JSON.stringify(rows);
+    writeFileSync(path, json);
+    expect(loadReports(path).map((r) => r.group)).toEqual(['violent', 'transport', null]);
+    expect(readFileSync(path, 'utf8')).toBe(json);
   });
 });

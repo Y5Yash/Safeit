@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { groupOf } from '../config/categories.js';
 import { windowStart } from '../config/window.js';
 import type { Report } from '../types.js';
 
@@ -12,7 +13,7 @@ function defaultPath(): string {
   return existsSync(here) ? here : join(process.cwd(), 'data', 'reports.json');
 }
 
-/** Reads the static reports file (cached per path). Missing file → []. Drops rows published before windowStart(). */
+/** Reads the static reports file (cached per path). Missing file → []. Drops rows published before windowStart(); adds the derived `group`. */
 export function loadReports(path: string = defaultPath()): Report[] {
   const hit = cache.get(path);
   if (hit) return hit;
@@ -28,9 +29,9 @@ export function loadReports(path: string = defaultPath()): Report[] {
   }
   const parsed = JSON.parse(raw) as unknown;
   const min = windowStart().getTime();
-  const rows = (Array.isArray(parsed) ? (parsed as Report[]) : []).filter(
-    (r) => Date.parse(r.published_datetime) >= min,
-  );
+  const rows = (Array.isArray(parsed) ? (parsed as Report[]) : [])
+    .filter((r) => Date.parse(r.published_datetime) >= min)
+    .map((r) => ({ ...r, group: groupOf(r) }));
   cache.set(path, rows);
   return rows;
 }

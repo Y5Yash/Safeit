@@ -1,4 +1,4 @@
-import { CATEGORIES } from '../config/categories.js';
+import { CATEGORIES, GROUPS } from '../config/categories.js';
 import { CITY_CONFIG } from '../config/cities.js';
 import type { City, Report, SourceType } from '../types.js';
 import { json } from './http.js';
@@ -27,6 +27,7 @@ export function handleMeta(_req: Request, reports: Report[]): Response {
   return json({
     cities: Object.entries(CITY_CONFIG).map(([id, c]) => ({ id, name: c.displayName, center: c.center, bbox: c.bbox })),
     categories: CATEGORIES.map(({ id, label }) => ({ id, label })),
+    groups: GROUPS.map(({ id, label, color, disabled }) => ({ id, label, color, ...(disabled ? { disabled } : {}) })),
     sources,
     date_range: Number.isFinite(min) ? { min: new Date(min).toISOString(), max: new Date(max).toISOString() } : null,
   });
