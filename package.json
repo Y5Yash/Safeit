@@ -1,0 +1,26 @@
+{
+  "name": "safeit-backend",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "seed:gazetteer": "tsx scripts/seed-gazetteer.ts",
+    "collect": "tsx --env-file-if-exists=.env scripts/collect.ts",
+    "merge:police": "tsx scripts/merge-police.ts"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.11.1",
+    "h3-js": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  }
+}
